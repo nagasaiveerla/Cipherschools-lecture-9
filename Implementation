@@ -1,0 +1,139 @@
+
+public class veerla{
+    int rollNo; //camel casing 
+    String name;
+    public static void main(String args[]){
+    Balam s1= new Balam();
+    Balam s2= new Balam();
+    Balam s3= new Balam();
+    s1.rollNo=1;
+    s1.name="nagasai";
+    s2.rollNo=2;
+    s2.name="rohitsharma";
+    s3.rollNo=3;
+    s3.name="kohli";
+    System.out.println(s1.rollNo);
+    System.out.println(s1.name);
+    System.out.println(s2.rollNo);
+    System.out.println(s2.name);
+    System.out.println(s3.rollNo);
+    System.out.println(s3.name);
+
+
+    //implementation
+
+    //1.main withing the same class
+    class Student{
+        int rollno;
+        String name;
+        public static void main(String []args){
+            Student s1=new Student();
+            Student s2=new Student();
+            Student s3=new Student();
+            s1.rollno=1;
+            s2.name="alexa";
+            System.out.println(s1.rollno);
+            System.out.println(s2.name);
+            System.out.println(s3.name);
+        }
+
+    }
+    //2.main in different class
+    class Student{
+        int rollno;
+        String name;
+    }
+    class MainClass{
+        public static void main(String[] args){
+            Student s1=new Student();
+            Student s2=new Student();
+            Student s3=new Student();
+            s1.rollno=1;
+            s2.name="alexa";
+            System.out.println(s1.rollno);
+            System.out.println(s2.name);
+            System.out.println(s3.name);
+        }
+
+        }
+    }
+    }
+//types of variables
+//1.local reference variable
+class Student{                                   //1.declared within the method in a class or taken as an argurment.
+                                                //2.occupy memory on stack
+                                                //3.will be destroyed when the contorl leaves
+                                                //the method and the associtated object will be eligible for garbage collection.
+
+    int rollno;
+    String name;
+}
+class MainClass{
+    public static void main(String [] args){
+        Student s= new Student();
+        s.rollno=1;
+        s.name="alexa";
+        System.out.println(s.rollno);
+    }
+    }
+}
+}
+
+    
+    
+    
+    
+    
+    
+    }
+}
+
+//2.instance reference variable
+class Student{
+    int rollno;                      //1.declaered outside the methods in a class
+                                    //2.occupy memory on heap
+                                    //3.will be retained in memory till the object is alive
+                                    
+
+                                    //note: in above the case "s " is a instance reference vairable ,as it not inside 
+                                    //any method in the helpher class.
+}
+class Helpher
+{
+    Student s=new Student();
+    void set(int )
+    {
+        void show()
+        System.out.println(s.rollno);}
+
+    }class MainClass{
+        public static void main(String args[]){
+            Helper obj=new Helper();
+            obj.set(1);
+            obj.show();
+
+        }
+    }
+}
+}
+//inheritence
+package inhertance;
+class Shape{//parent class, base class,super class
+    double pi=3.14;
+    double getSquare(int r)
+    {
+        return r*r;
+    }
+}
+class Circle extends Shape{//child class ,derived class,sub class
+     void area(int r)
+     {
+        System.out.println(pi*getSquare(r));
+     }
+}
+public class Inheritence{
+    public static void main(String args[]){
+       Circle c=new Circle();
+       c.area(5);
+    }
+}
